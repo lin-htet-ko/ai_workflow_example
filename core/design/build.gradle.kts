@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.compose)
+    id("com.android.library")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
-    namespace = "com.linhtetko.ai_workflow_example"
+    namespace = "com.linhtetko.ai_workflow_example.core.design"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.linhtetko.ai_workflow_example"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -36,14 +33,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
-    implementation(project(":data"))
-    implementation(project(":core:design"))
-    implementation(project(":core:analytics"))
-    implementation(project(":core:common"))
-    implementation(project(":features:browse"))
-    implementation(project(":features:cart"))
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
