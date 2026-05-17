@@ -24,3 +24,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "ai-workflow-example"
 include(":app")
+include(":core:design")
+include(":core:analytics")
+include(":core:common")
+include(":domain")
+include(":data")
+include(":features:browse")
+include(":features:cart")

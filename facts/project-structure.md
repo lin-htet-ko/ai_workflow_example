@@ -1,0 +1,51 @@
+# Project Structure
+
+- app (package: com.linhtetko.ai_workflow_example)
+    - entry
+    - navigation
+        - destinations
+        - navigator
+            - impl
+    - services
+    - di
+    - App.kt
+- core
+    - design (package: com.linhtetko.ai_workflow_example.core.design)
+        - animation
+        - components
+        - theme
+        - state
+    - analytics (package: com.linhtetko.ai_workflow_example.core.analytics)
+    - common (package: com.linhtetko.ai_workflow_example.core.common)
+- domain (package: com.linhtetko.ai_workflow_example.domain)
+    - models
+    - di
+    - repositories
+    - usecase
+    - utils
+- data (package: com.linhtetko.ai_workflow_example.data)
+    - models
+        - request
+        - response
+    - mappers
+    - services
+    - database
+    - preferences
+    - sources
+        - remote
+            - impl
+        - local
+    - di
+    - repositories
+    - utils
+- features
+    - browse (package: com.linhtetko.ai_workflow_example.features.browse)
+        - presentation
+            - browse-screen
+                - components
+        - di
+    - cart (package: com.linhtetko.ai_workflow_example.features.cart)
+        - presentation
+            - cart-screen
+                - components
+        - di
